@@ -30,7 +30,7 @@ db.once('open', () => {
 
 app.get('/', async (req, res) => {
     const helpers = await Helper.find({});
-    res.send(helpers);
+    res.render('form', { locations, typesOfWork });
 })
 
 app.listen(port, () => {
