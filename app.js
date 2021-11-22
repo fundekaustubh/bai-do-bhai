@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
+const Helper = require('./Schema/Helper');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -27,7 +29,8 @@ db.once('open', () => {
 });
 
 app.get('/', async (req, res) => {
-    res.send('Hi');
+    const helpers = await Helper.find({});
+    res.send(helpers);
 })
 
 app.listen(port, () => {
