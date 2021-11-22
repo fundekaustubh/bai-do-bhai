@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const Helper = require('./Schema/Helper');
 const path = require('path');
+const { findHelpers } = require('./findHelpers');
+const { locations, typesOfWork } = require('./data.js');
 require('dotenv').config();
 
 const app = express();
@@ -31,6 +33,13 @@ db.once('open', () => {
 app.get('/', async (req, res) => {
     const helpers = await Helper.find({});
     res.render('form', { locations, typesOfWork });
+})
+
+app.post('/helpers', async (req, res) => {
+    const { helper: desiredHelper } = req.body;
+    const helpers = await Helper.find({});
+    const requiredHelpers = findHelpers(helpers, desiredHelper);
+    res.render('required-helpers', { requiredHelpers });
 })
 
 app.listen(port, () => {

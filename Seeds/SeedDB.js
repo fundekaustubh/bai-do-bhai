@@ -13,7 +13,7 @@ const {
     startTimes,
     endTimes,
     typesOfWork,
-} = require('../data.js');
+} = require('./data.js');
 mongoose.connect('mongodb://localhost:27017/domestic-helpers-portal', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -99,4 +99,4 @@ const addHelpers = async () => {
 };
 addHelpers().then(() => {
     mongoose.connection.close();
-});;
+});
