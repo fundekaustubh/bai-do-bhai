@@ -1,0 +1,29 @@
+{
+  "name": "bai-do-bhai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fundekaustubh/bai-do-bhai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fundekaustubh/bai-do-bhai/issues"
+  },
+  "homepage": "https://github.com/fundekaustubh/bai-do-bhai#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13",
+    "nodemon": "^2.0.15",
+    "object-hash": "^2.2.0",
+    "random-email": "^1.0.3"
+  }
+}
