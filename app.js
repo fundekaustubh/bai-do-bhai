@@ -4,7 +4,7 @@ const ejsMate = require('ejs-mate');
 const Helper = require('./Schema/Helper');
 const path = require('path');
 const { findHelpers } = require('./findHelpers');
-const { locations, typesOfWork } = require('./data.js');
+const { locations, typesOfWork } = require('./Seeds/data.js');
 require('dotenv').config();
 
 const app = express();
